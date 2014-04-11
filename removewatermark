@@ -82,6 +82,8 @@ if __name__ == '__main__':
 			if exitcode != 0:
 				sys.stderr.write('pdftk failed to compress processed file. Aborting.\n')
 				sys.exit(4)
+
+			print('Writing scrubbed file to %s' % outfilename)
 		finally:
 			try:
 				os.unlink(temp1.name)
