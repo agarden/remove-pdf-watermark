@@ -87,9 +87,9 @@ if __name__ == '__main__':
 		finally:
 			try:
 				os.unlink(temp1.name)
-			except NameError:
+			except (NameError, OSError):
 				pass
 			try:
 				os.unlink(temp2.name)
-			except NameError:
+			except (NameError, OSError):
 				pass
