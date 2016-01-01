@@ -30,6 +30,8 @@ def remove_watermark_objects(infile, outfile, needle):
 			buffer = [line]
 		elif line.startswith(b'endobj'):
 			if not foundneedle:
+				if buffer == False:
+					buffer = []
 				buffer.append(line)
 				writebuffer(outfile, buffer)
 			buffer = False
