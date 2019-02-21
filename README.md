@@ -1,7 +1,7 @@
 remove-pdf-watermark
 ====================
 
-Short script for removing watermarks from PDF files. Requires [pdftk](http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/).
+Short script for removing watermarks from PDF files. Requires [pdftk](http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/). Users of MacOS El Capitan (10.11) and above should download [pdftk server version 2.02](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk_server-2.02-mac_osx-10.11-setup.pkg).
 
 Tested only lightly. Works by using pdftk to uncompress the PDF, scans through the file for the supplied watermark text 
 and removes the closest containing object, then recompresses with pdftk. Sometimes a watermark might not be represented as
